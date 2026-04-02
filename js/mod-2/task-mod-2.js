@@ -1,7 +1,7 @@
 "use strict";
 console.log("Hello, world");
 
-// Задача 1. Замовлення дроїдів
+//! Задача 1. Замовлення дроїдів
 // Станція з продажу ремонтних дроїдів готова до запуску, залишилося написати програмне
 // забезпечення для відділу продажів.Оголоси функцію makeTransaction(quantity,
 // pricePerDroid, customerCredits), яка складає та повертає повідомлення про
@@ -42,7 +42,7 @@ console.log("Hello, world");
 // console.log(makeTransaction(8, 2000, 10000)); // "Insufficient funds!"
 // console.log(makeTransaction(10, 500, 5000)); // "You ordered 10 droids worth 5000 credits!"
 
-// Задача 2. Форматування повідомлення
+//! Задача 2. Форматування повідомлення
 // Оголоси функцію formatMessage(message, maxLength), яка приймає рядок(параметр
 // message) та перевіряє його довжину відповідно до заданої максимальної довжини
 // (параметр maxLength).
@@ -53,3 +53,47 @@ console.log("Hello, world");
 // додає трикрапку "..." в кінці та повертає обрізану версію.
 // Візьми код нижче і встав після оголошення своєї функції для перевірки коректності
 // її роботи. У консоль будуть виведені результати її роботи.
+
+// function formatMessage(message, maxLength) {
+//   const messageLength = message.length;
+//   console.log(messageLength);
+//   if (messageLength <= maxLength) {
+//     return message;
+//   } else {
+//     return message.slice(0, maxLength) + "...";
+//   }
+// }
+
+// console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."
+// console.log(formatMessage("Curabitur ligula sapien", 23)); // "Curabitur ligula sapien"
+// console.log(formatMessage("Vestibulum facilisis purus nec", 20)); // "Vestibulum facilisis..."
+// console.log(formatMessage("Vestibulum facilisis purus nec", 30)); // "Vestibulum facilisis purus nec"
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15)); // "Nunc sed turpis..."
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)); // "Nunc sed turpis a felis in nunc fringilla"
+
+//! Задача 3. Перевірка спаму
+// Функція checkForSpam(message) приймає рядок (параметр message), перевіряє його на вміст заборонених
+// слів spam і sale, і повертає результат перевірки.Слова в рядку параметра message можуть бути в
+// довільному регістрі, наприклад SPAM або sAlE.
+// Доповни код функції таким чином, що:
+
+// Якщо знайдено заборонене слово (spam або sale), то функція повертає буль true
+// Якщо в рядку відсутні заборонені слова, функція повертає буль false
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У
+// консоль будуть виведені результати її роботи.
+
+function checkForSpam(message) {
+  const messageLower = message.toLowerCase();
+  console.log(messageLower);
+  const hasSpam =
+    messageLower.includes("spam") || messageLower.includes("sale");
+  return hasSpam;
+}
+
+console.log(checkForSpam("Latest technology news")); // false
+console.log(checkForSpam("JavaScript weekly newsletter")); // false
+console.log(checkForSpam("Get best sale offers now!")); // true
+console.log(checkForSpam("Amazing SalE, only tonight!")); // true
+console.log(checkForSpam("Trust me, this is not a spam message")); // true
+console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")); // true
+console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
