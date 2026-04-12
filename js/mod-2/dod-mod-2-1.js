@@ -654,7 +654,18 @@ console.log("Hello, world");
 // "Пароль прийнято", в іншому випадку поверніть "Пароль не відповідає вимогам".
 // ```
 
-function checkPassword(password, confirmPassword) {}
+// function checkPassword(password, confirmPassword) {
+//   const hasDigit = /\d/.test(password);
+//   console.log(hasDigit);
+
+//   if (password === confirmPassword && hasDigit) {
+//     return "Пароль прийнято";
+//   }
+//   return "Пароль не відповідає вимогам";
+// }
+
+// const res1 = checkPassword("Try123", "Try123");
+// console.log(res1);
 
 // ```
 // Задача-36
@@ -664,76 +675,246 @@ function checkPassword(password, confirmPassword) {}
 // них, поверніть "Немає можливості для відеоконференції".
 // ```
 
+// function hasVideoConference(isOnline, hasCamera, hasMicrophone) {
+//   if (isOnline && (hasCamera || hasMicrophone)) {
+//     return "Готові до відеоконференції";
+//   }
+//   return "Немає можливості для відеоконференції";
+// }
+
+// const res1 = hasVideoConference(true, false, true);
+// console.log(res1);
+
 // ```
 // Задача-37
 // Напишіть функцію, яка приймає три параметри: currentTime, isWeekend, і isHoliday.
-// Якщо зараз менше 8 ранку і це не вихідний день, і це не свято, поверніть "Скоро 
+// Якщо зараз менше 8 ранку і це не вихідний день, і це не свято, поверніть "Скоро
 // час на роботу", в іншому випадку поверніть "Вільний час".
 // ```
 
+// function checkWorkDay(currentTime, isWeekend, isHoliday) {
+//   if (currentTime < 8 && !isWeekend && !isHoliday) {
+//     return "Скоро час на роботу";
+//   }
+//   return "Вільний час";
+// }
+
+// const res1 = checkWorkDay(7, false, false);
+// console.log(res1);
+
 // ```
 // Задача-38
-// Напишіть функцію, яка приймає три параметри: temperature, isSnowing, і hasHeater 
-// (булевий).Якщо температура нижче 0 і йде сніг, і у вас є обігрівач, поверніть 
-// "Тепло та затишно", якщо обігрівача немає, поверніть "Потрібно зігрітися", в 
+// Напишіть функцію, яка приймає три параметри: temperature, isSnowing, і hasHeater
+// (булевий).Якщо температура нижче 0 і йде сніг, і у вас є обігрівач, поверніть
+// "Тепло та затишно", якщо обігрівача немає, поверніть "Потрібно зігрітися", в
 // іншому випадку поверніть "Погода нормальна".
 // ```
 
+// function checkWeather(temperature, isSnowing, hasHeater) {
+//   if (temperature < 0 && isSnowing) {
+//     if (hasHeater) {
+//       return "Тепло та затишно";
+//     }
+//     return "Потрібно зігрітися";
+//   }
+//   return "Погода нормальна";
+// }
+
+// const res1 = checkWeather(-10, false, true);
+// console.log(res1);
+
 // ```
 // Задача-39
-// Напишіть функцію, яка приймає три параметри: age, hasDriverLicense (булевий), і 
-// isInsured(булевий).Якщо ви старше 18 років, маєте водійське посвідчення і 
-// страховку, поверніть "Можна керувати автомобілем", в іншому випадку поверніть 
+// Напишіть функцію, яка приймає три параметри: age, hasDriverLicense (булевий), і
+// isInsured(булевий).Якщо ви старше 18 років, маєте водійське посвідчення і
+// страховку, поверніть "Можна керувати автомобілем", в іншому випадку поверніть
 // "Не можна керувати автомобілем".
 // ```
 
+// function checkDriver(age, hasDriverLicense, isInsured) {
+//   if (age > 18 && hasDriverLicense && isInsured) {
+//     return "Можна керувати автомобілем";
+//   }
+//   return "Не можна керувати автомобілем";
+// }
+
+// const res1 = checkDriver(34, true, false);
+// console.log(res1);
+
 // ```
 // Задача-40
-// Напишіть функцію, яка приймає три параметри: currentDay, hasMeeting (булевий), і 
-// isHoliday.Якщо сьогодні понеділок, середа або п'ятниця, і у вас є зустріч, і це 
+// Напишіть функцію, яка приймає три параметри: currentDay, hasMeeting (булевий), і
+// isHoliday.Якщо сьогодні понеділок, середа або п'ятниця, і у вас є зустріч, і це
 // не свято, поверніть "Є зустріч", в іншому випадку поверніть "Немає зустрічі".
 // ```
 
+// function hasMeeting(currentDay, hasMeeting, isHoliday) {
+//   const isMeetingDay =
+//     currentDay === "понеділок" ||
+//     currentDay === "середа" ||
+//     currentDay === "п`ятниця";
+//   if (isMeetingDay && hasMeeting && !isHoliday) {
+//     return "Є зустріч";
+//   }
+//   return "Немає зустрічі";
+// }
+
+// const res1 = hasMeeting("п`ятниця", true, false);
+// console.log(res1);
+
 // ```
 // Задача-41
-// Напишіть функцію, яка приймає три параметри: itemPrice, isDiscounted (булевий), 
-// і discountAmount.Якщо ціна товару більше 1000, і він знижений на 10 % або більше, 
+// Напишіть функцію, яка приймає три параметри: itemPrice, isDiscounted (булевий),
+// і discountAmount.Якщо ціна товару більше 1000, і він знижений на 10 % або більше,
 // поверніть "Скидка доступна", в іншому випадку поверніть "Скидка не доступна".
 // ```
+
+// function checkSale(itemPrice, isDiscounted, discountAmount) {
+//   if (itemPrice > 1000 && isDiscounted && discountAmount >= 0.1) {
+//     return "Скидка доступна";
+//   }
+//   return "Скидка не доступна";
+// }
+
+// const res1 = checkSale(1100, true, 0.05);
+// console.log(res1);
 
 // ---
 
 // ```
 // Задача-42
-// Напишіть функцію, яка приймає один параметр dayOfWeek. Використовуючи switch, 
-// поверніть "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота" або 
-// "Неділя" залежно від введеного числа(1 - Понеділок, 2 - Вівторок, і т.д.).Якщо 
+// Напишіть функцію, яка приймає один параметр dayOfWeek. Використовуючи switch,
+// поверніть "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота" або
+// "Неділя" залежно від введеного числа(1 - Понеділок, 2 - Вівторок, і т.д.).Якщо
 // введене число не в діапазоні від 1 до 7, поверніть "Невідомий день".
 // ```
 
+// function currentDay(dayOfWeek) {
+//   switch (dayOfWeek) {
+//     case 1:
+//       return "Понеділок";
+//       break;
+//     case 2:
+//       return "Вівторок";
+//       break;
+//     case 3:
+//       return "Середа";
+//       break;
+//     case 4:
+//       return "Четвер";
+//       break;
+//     case 5:
+//       return "П'ятниця";
+//       break;
+//     case 6:
+//       return "Субота";
+//       break;
+//     case 7:
+//       return "Неділя";
+//       break;
+//     default:
+//       return "Невідомий день";
+//       break;
+//   }
+// }
+
+// const res1 = currentDay(1);
+// console.log(res1);
+
 // ```
 // Задача-43
-// Напишіть функцію, яка приймає один параметр grade. Використовуючи switch, 
-// поверніть "Відмінно", "Добре", "Задовільно", "Незадовільно" в залежності від 
-// оцінки: "A" - "Відмінно", "B" - "Добре", "C" - "Задовільно", "D" або "F" - 
+// Напишіть функцію, яка приймає один параметр grade. Використовуючи switch,
+// поверніть "Відмінно", "Добре", "Задовільно", "Незадовільно" в залежності від
+// оцінки: "A" - "Відмінно", "B" - "Добре", "C" - "Задовільно", "D" або "F" -
 // "Незадовільно".
 // ```
 
+// function studentGrade(grade) {
+//   switch (grade) {
+//     case "A":
+//       return "Відмінно";
+//       break;
+//     case "B":
+//       return "Добре";
+//       break;
+//     case "C":
+//       return "Задовільно";
+//       break;
+//     case "D":
+//     case "F":
+//       return "Незадовільно";
+
+//     default:
+//       return "Не здавав залік";
+//       break;
+//   }
+// }
+
+// const res1 = studentGrade("B");
+// console.log(res1);
+
 // ```
 // Задача-44
-// Напишіть функцію, яка приймає один параметр fruit. Використовуючи switch, 
-// поверніть "Цитрус", "Яблуко", "Груша", або "Ягода" в залежності від введеного 
-// фрукта.Наприклад, "Лимон", "Апельсин", "Грейпфрут" повинні повернути "Цитрус", 
+// Напишіть функцію, яка приймає один параметр fruit. Використовуючи switch,
+// поверніть "Цитрус", "Яблуко", "Груша", або "Ягода" в залежності від введеного
+// фрукта.Наприклад, "Лимон", "Апельсин", "Грейпфрут" повинні повернути "Цитрус",
 // "Яблуко" - "Яблуко", "Груша" - "Груша", "Полуниця", "Малина", "Чорниця" - "Ягода".
 // ```
 
+// function checkFruit(fruit) {
+//   switch (fruit) {
+//     case "Лимон":
+//     case "Апельсин":
+//     case "Грейпфрут":
+//       return "Цитрус";
+//       break;
+//     case "Яблуко":
+//       return "Яблуко";
+//       break;
+//     case "Груша":
+//       return "Груша";
+//       break;
+//     case "Полуниця":
+//     case "Малина":
+//     case "Чорниця":
+//       return "Ягода";
+//     default:
+//       return `Фрукт ${fruit} не знайдений!`;
+//       break;
+//   }
+// }
+
+// const res1 = checkFruit("Груша");
+// console.log(res1);
+
 // ```
 // Задача-45
-// Напишіть функцію, яка приймає один параметр vehicleType. Використовуючи switch, 
-// поверніть "Легковий автомобіль", "Вантажівка", "Мотоцикл", або "Інше" в 
-// залежності від введеного типу транспортного засобу.Наприклад, "Car" - 
-// "Легковий автомобіль", "Truck" - "Вантажівка", "Motorcycle" - "Мотоцикл", і інші 
+// Напишіть функцію, яка приймає один параметр vehicleType. Використовуючи switch,
+// поверніть "Легковий автомобіль", "Вантажівка", "Мотоцикл", або "Інше" в
+// залежності від введеного типу транспортного засобу.Наприклад, "Car" -
+// "Легковий автомобіль", "Truck" - "Вантажівка", "Motorcycle" - "Мотоцикл", і інші
 // випадки - "Інше".
+
+// function checkType(vehicleType) {
+//   switch (vehicleType) {
+//     case "Car":
+//       return "Легковий автомобіль";
+//       break;
+//     case "Truck":
+//       return "Вантажівка";
+//       break;
+//     case "Motorcycle":
+//       return "Мотоцикл";
+//       break;
+
+//     default:
+//       return "Інше";
+//       break;
+//   }
+// }
+
+// const res1 = checkType("Sport-Car");
+// console.log(res1);
 
 // ```
 
@@ -743,47 +924,203 @@ function checkPassword(password, confirmPassword) {}
 // "Орлан", "Горобець" - "Птах", "Лосось", "Тунець", "Тріска" - "Риба", "Ящірка",
 // "Черепаха", "Змія" - "Рептилія".
 
+// function checkAnimal(animal) {
+//   switch (animal) {
+//     case "Кішка":
+//     case "Собака":
+//     case "Кінь":
+//       return "Ссавець";
+//       break;
+//     case "Голуб":
+//     case "Орлан":
+//     case "Горобець":
+//       return "Птах";
+//       break;
+//     case "Лосось":
+//     case "Тунець":
+//     case "Тріска":
+//       return "Риба";
+//       break;
+//     case "Ящірка":
+//     case "Черепаха":
+//     case "Змія":
+//       return "Рептилія";
+//       break;
+
+//     default:
+//       return `Немає ${animal} в списку`;
+//       break;
+//   }
+// }
+
+// const res1 = checkAnimal("Корова");
+// console.log(res1);
+
 // ```
 // Задача-47
-// Напишіть функцію, яка приймає один параметр weather. Використовуючи switch, 
-// поверніть "Сонячно", "Хмарно", "Дощ", або "Сніг" в залежності від введеного типу 
-// погоди.Наприклад, "Sunny" - "Сонячно", "Cloudy" - "Хмарно", "Rainy" - "Дощ", 
+// Напишіть функцію, яка приймає один параметр weather. Використовуючи switch,
+// поверніть "Сонячно", "Хмарно", "Дощ", або "Сніг" в залежності від введеного типу
+// погоди.Наприклад, "Sunny" - "Сонячно", "Cloudy" - "Хмарно", "Rainy" - "Дощ",
 // "Snowy" - "Сніг".
 // ```
 
+// function checkWeather(weather) {
+//   switch (weather) {
+//     case "Sunny":
+//       return "Сонячно";
+//       break;
+//     case "Cloudy":
+//       return "Хмарно";
+//       break;
+//     case "Rainy":
+//       return "Дощ";
+//       break;
+//     case "Snowy":
+//       return "Сніг";
+//       break;
+
+//     default:
+//       return "Інший тип погоди";
+//       break;
+//   }
+// }
+
+// const res1 = checkWeather("Sunny");
+// console.log(res1);
+
 // ```
 // Задача-48
-// Напишіть функцію, яка приймає один параметр mood. Використовуючи switch, 
-// поверніть "Щасливий", "Сумний", "Злий", або "Здивований" в залежності від 
-// введеного настрою.Наприклад, "Happy" - "Щасливий", "Sad" - "Сумний", "Angry" - 
+// Напишіть функцію, яка приймає один параметр mood. Використовуючи switch,
+// поверніть "Щасливий", "Сумний", "Злий", або "Здивований" в залежності від
+// введеного настрою.Наприклад, "Happy" - "Щасливий", "Sad" - "Сумний", "Angry" -
 // "Злий", "Surprised" - "Здивований".
 // ```
 
+// function checkMood(mood) {
+//   switch (mood) {
+//     case "Happy":
+//       return "Щасливий";
+//       break;
+//     case "Sad":
+//       return "Сумний";
+//       break;
+//     case "Angry":
+//       return "Злий";
+//     case "Surprised":
+//       return "Здивований";
+//       break;
+
+//     default:
+//       return "Інший настрій";
+//       break;
+//   }
+// }
+
+// const res1 = checkMood("Happy");
+// console.log(res1);
+
 // ```
 // Задача-49
-// Напишіть функцію, яка приймає один параметр month. Використовуючи switch, 
+// Напишіть функцію, яка приймає один параметр month. Використовуючи switch,
 // поверніть назву сезону("Весна", "Літо", "Осінь", "Зима") в залежності від місяця.
-// Наприклад, "Березень", "Квітень", "Травень" - "Весна", "Червень", "Липень", 
-// "Серпень" - "Літо", "Вересень", "Жовтень", "Листопад" - "Осінь", "Грудень", 
+// Наприклад, "Березень", "Квітень", "Травень" - "Весна", "Червень", "Липень",
+// "Серпень" - "Літо", "Вересень", "Жовтень", "Листопад" - "Осінь", "Грудень",
 // "Січень", "Лютий" - "Зима".
 // ```
 
+// function checkMonthSeasons(month) {
+//   switch (month) {
+//     case "Березень":
+//     case "Квітень":
+//     case "Травень":
+//       return "Весна";
+//       break;
+
+//     case "Червень":
+//     case "Липень":
+//     case "Серпень":
+//       return "Літо";
+//       break;
+
+//     case "Вересень":
+//     case "Жовтень":
+//     case "Листопад":
+//       return "Осінь";
+//       break;
+
+//     case "Грудень":
+//     case "Січень":
+//     case "Лютий":
+//       return "Зима";
+//       break;
+
+//     default:
+//       break;
+//   }
+// }
+
+// const res1 = checkMonthSeasons("Жовтень");
+// console.log(res1);
+
 // ```
 // Задача-50
-// Напишіть функцію, яка приймає один параметр color. Використовуючи switch, 
-// поверніть "Теплий колір" або "Холодний колір" в залежності від кольору.Наприклад, 
-// "Red", "Orange", "Yellow" - "Теплий колір", "Blue", "Green", "Purple" - 
+// Напишіть функцію, яка приймає один параметр color. Використовуючи switch,
+// поверніть "Теплий колір" або "Холодний колір" в залежності від кольору.Наприклад,
+// "Red", "Orange", "Yellow" - "Теплий колір", "Blue", "Green", "Purple" -
 // "Холодний колір".
 // ```
 
+// function typeColor(color) {
+//   switch (color) {
+//     case "Red":
+//     case "Orange":
+//     case "Yellow":
+//       return "Теплий колір";
+//       break;
+
+//     case "Blue":
+//     case "Green":
+//     case "Purple":
+//       return "Холодний колір";
+//       break;
+
+//     default:
+//       break;
+//   }
+// }
+
+// const res1 = typeColor("Yellow");
+// console.log(res1);
+
 // ```
 // Задача-51
-// Напишіть функцію, яка приймає один параметр continent. Використовуючи switch, 
-// поверніть назву континенту або "Невідомий континент" в залежності від введеного 
-// значення.Наприклад, "Africa", "Europe", "Asia", "North America", "South America", 
-// "Antarctica", "Australia" - відомі континенти, інші випадки - "Невідомий 
+// Напишіть функцію, яка приймає один параметр continent. Використовуючи switch,
+// поверніть назву континенту або "Невідомий континент" в залежності від введеного
+// значення.Наприклад, "Africa", "Europe", "Asia", "North America", "South America",
+// "Antarctica", "Australia" - відомі континенти, інші випадки - "Невідомий
 // континент".
 // ```
+
+// function checkContinent(continent) {
+//   switch (continent) {
+//     case "Africa":
+//     case "Europe":
+//     case "Asia":
+//     case "North America":
+//     case "South America":
+//     case "Antarctica":
+//     case "Australia":
+//       return "Відомі континенти";
+//       break;
+
+//     default:
+//       return "Невідомий континент";
+//       break;
+//   }
+// }
+
+// const res1 = checkContinent("Asia");
+// console.log(res1);
 
 // ---
 
@@ -816,84 +1153,84 @@ function checkPassword(password, confirmPassword) {}
 // ```
 
 // ```js
-// console.log(true || false);
-// console.log(false || true);
-// console.log(true || true);
+// console.log(true || false); // true
+// console.log(false || true); // true
+// console.log(true || true); // true
 
-// console.log(3 || false);
-// console.log(false || 3);
-// console.log(3 || true);
-// console.log(true || 3);
+// console.log(3 || false); // 3
+// console.log(false || 3); // 3
+// console.log(3 || true); // 3
+// console.log(true || 3); // true
 // ```
 
 // ```js
-// console.log(!true);
-// console.log(!false);
-// console.log(!3);
-// console.log(!'Mango');
-// console.log(!0);
-// console.log(!'');
+// console.log(!true); // false
+// console.log(!false); // true
+// console.log(!3); // false
+// console.log(!"Mango"); // false
+// console.log(!0); // true
+// console.log(!""); // true
 
 // const isOnline = true;
-// const isNotOnline = !isOnline;
+// const isNotOnline = !isOnline; // false
 
-// console.log(true && false);
-// console.log(false && true);
-// console.log(true && true);
-// console.log(false && false);
+// console.log(true && false); // false
+// console.log(false && true); // false
+// console.log(true && true); // true
+// console.log(false && false); // false
 
-// console.log(true || false);
-// console.log(false || true);
-// console.log(true || true);
-// console.log(false || false);
+// console.log(true || false); // true
+// console.log(false || true); // true
+// console.log(true || true); // true
+// console.log(false || false); // false
 
-// console.log(!true);
-// console.log(!false);
-// console.log(!!true);
-// console.log(!!false);
+// console.log(!true); // false
+// console.log(!false); // true
+// console.log(!!true); // true
+// console.log(!!false); // false
 
-// console.log(1 === 1 && 2 === 2);
-// console.log(1 === 2 && 2 === 2);
-// console.log(1 === 1 || 2 === 2);
-// console.log(1 === 2 || 2 === 2);
+// console.log(1 === 1 && 2 === 2); // true
+// console.log(1 === 2 && 2 === 2); // false
+// console.log(1 === 1 || 2 === 2); // true
+// console.log(1 === 2 || 2 === 2); // true
 
-// console.log(1 > 2 && 2 < 3);
-// console.log(1 < 2 && 2 < 3);
-// console.log(1 > 2 || 2 < 3);
-// console.log(1 < 2 || 2 < 3);
+// console.log(1 > 2 && 2 < 3); // false
+// console.log(1 < 2 && 2 < 3); // true
+// console.log(1 > 2 || 2 < 3); // true
+// console.log(1 < 2 || 2 < 3); // true
 
-// console.log(0 && 3);
-// console.log(3 && 0);
-// console.log(0 || 3);
-// console.log(3 || 0);
+// console.log(0 && 3); // 0
+// console.log(3 && 0); // 0
+// console.log(0 || 3); // 3
+// console.log(3 || 0); // 3
 
-// console.log('' || 'apple');
-// console.log('orange' || '');
-// console.log('' && 'banana');
-// console.log('grape' && '');
+// console.log("" || "apple"); // 'apple'
+// console.log("orange" || ""); // 'orange'
+// console.log("" && "banana"); // ''
+// console.log("grape" && ""); // ''
 
-// console.log(0 || false);
-// console.log(false || 0);
-// console.log(1 && 'cherry');
-// console.log('banana' && 1);
-// console.log(null && 'pear');
-// console.log('peach' && undefined);
-// console.log(undefined || 'plum');
-// console.log('melon' || null);
-// console.log(undefined && false);
-// console.log(true || 'watermelon');
-// console.log('watermelon' || true);
-// console.log(false && 'pineapple');
-// console.log('pineapple' && false);
-// console.log(NaN || 'kiwi');
-// console.log('kiwi' || NaN);
-// console.log(NaN && 'mango');
-// console.log('mango' && NaN);
-// console.log(Infinity || 'apricot');
-// console.log('apricot' || Infinity);
-// console.log(Infinity && 'blueberry');
-// console.log('blueberry' && Infinity);
-// console.log(null || undefined);
+// console.log(0 || false); // false
+// console.log(false || 0); // 0
+// console.log(1 && "cherry"); // 'cherry'
+// console.log("banana" && 1); // 1
+// console.log(null && "pear"); // null
+// console.log("peach" && undefined); // undefined
+// console.log(undefined || "plum"); // 'plum'
+// console.log("melon" || null); // 'melon'
+// console.log(undefined && false); // undefined
+// console.log(true || "watermelon"); // true
+// console.log("watermelon" || true); // 'watermelon'
+// console.log(false && "pineapple"); // false
+// console.log("pineapple" && false); // false
+// console.log(NaN || "kiwi"); // 'kiwi'
+// console.log("kiwi" || NaN); // 'kiwi'
+// console.log(NaN && "mango"); // NaN
+// console.log("mango" && NaN); // NaN
+// console.log(Infinity || "apricot"); // Infinity
+// console.log("apricot" || Infinity); // 'apricot'
+// console.log(Infinity && "blueberry"); // 'blueberry'
+// console.log("blueberry" && Infinity); // Infinity
+// console.log(null || undefined); // undefined
 // ```
 
 // ---
