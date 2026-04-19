@@ -100,9 +100,9 @@
 // 1. Напиши цикл, який виведе на консоль кожну другу літеру слова "JavaScript".
 
 // const str = "JavaScript";
-
-// for (let i = 0; i <= str.length - 1; i += 2) {
-//   const newStr = str[i];
+// let newStr = "";
+// for (let i = 0; i < str.length; i += 2) {
+//   newStr += str[i];
 //   console.log(newStr);
 // }
 
@@ -119,16 +119,31 @@
 // 1. Напиши функцію, яка приймає рядок та повертає рядок де кожен другий символ у
 //    верхньому регістрі
 
-function strUpper(str) {
-  let newStr = "";
-  for (let i = 0; i <= str.length - 1; i += 1) {
-    newStr += str[i].toUpperCase();
-    return strUpper;
-  }
-}
+// function strUpper(str) {
+//   let newStr = "";
+//   for (let i = 0; i < str.length; i += 1) {
+//     if (i % 2 !== 0) {
+//       newStr += str[i].toUpperCase();
+//     } else {
+//       newStr += str[i];
+//     }
+//   }
+//   return newStr;
+// }
 
-const res1 = strUpper("java script");
-console.log(res1);
+// const res1 = strUpper("java script");
+// console.log(res1);
 
 // 1. Напиши функцію getString(str1, str2, count). Функція повинна додати str2 до
 //    рядочка str1 стільки разів скільки вказали у параметрі count.
+
+// function getString(str1, str2, count) {
+//   let newStr = str1;
+//   for (let i = 0; i < count; i++) {
+//     newStr += str2;
+//   }
+//   return newStr;
+// }
+
+// const res1 = getString("try", "tree", 2);
+// console.log(res1);

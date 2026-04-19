@@ -77,8 +77,9 @@
 
 // function filterArray(numbers, value) {
 //   let array = [];
-//   for (let i = 0; i < numbers.length; i += 1) {
+//   for (let i = 0; i <= numbers.length; i += 1) {
 //     if (numbers[i] > value) {
+//     //   console.log(numbers[i]);
 //       array.push(numbers[i]);
 //     }
 //   }
@@ -90,3 +91,86 @@
 // console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
 // console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
 // console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+
+// ----------------------------------
+// function foo() {
+//   const arr = Array.from(arguments); // перетворює псевдомасив у масив.
+//   console.log(arguments);
+//   console.log(arr);
+// }
+
+// foo(10, 20, 30);
+
+// Зміна аргументс дозволяє нам працювати з невідомою кількістью аргументів.
+
+// Задача на рекурсію
+// Фібанача, результатом є сума двох попередніх чисел:
+// 0 1 1 2 3 5 8 13 21 34 55 ...
+
+// function fibba(index) {
+//   if (index <= 2) {
+//     return 1;
+//   }
+//   return fibba(index - 1) + fibba(index - 2);
+// }
+// const res1 = fibba(10);
+// console.log(res1);
+
+//! Факторіал, наприклад числа 5 це  !5 = 1 * 2 * 3 * 4 * 5;
+
+// function factorial(number) {
+//   if (number < 1) {
+//     return 1;
+//   }
+//   return number * factorial(number - 1);
+// }
+
+// const res1 = factorial(5);
+// console.log(res1);
+
+// ----------------
+
+// function getMap() {
+//   const arr = [];
+
+//   for (let i = 0; i < 10; i++) {
+//     arr.push([" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]);
+//   }
+
+//   for (let y = 0; y < arr.length; y++) {
+//     for (let x = 0; x < arr[y].length; x++) {
+//       if (x < y) {
+//         arr[y][x] = "0";
+//       }
+//       if (x > y) {
+//         arr[y][x] = "1";
+//       }
+
+//       if (x === y) {
+//         arr[y][x] = "*";
+//       }
+
+//       if (x === arr.length - y - 1) {
+//         arr[y][x] = "*";
+//       }
+//       if (y === 0 || x === 0) {
+//         arr[y][x] = "#";
+//       }
+
+//       if (y === arr.length - 1 || x === arr.length - 1) {
+//         arr[y][x] = "#";
+//       }
+//     }
+//   }
+//   showArr(arr);
+// }
+
+// function showArr(arr) {
+//   let result = "";
+//   for (const item of arr) {
+//     result += item.join("") + "\n";
+//   }
+//   console.log(result);
+// }
+
+// getMap();
