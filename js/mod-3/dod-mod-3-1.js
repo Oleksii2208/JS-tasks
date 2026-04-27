@@ -153,23 +153,40 @@
 // 1. Напиши функцію, яка приймає масив чисел і повертає новий масив, що містить
 //    лише числа, які діляться на 3.
 
-function num(arr) {
-  let array = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 3 === 0) {
-      array.push(arr[i]);
-    }
-  }
-  return array;
-}
+// function num(arr) {
+//   let array = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 3 === 0) {
+//       array.push(arr[i]);
+//     }
+//   }
+//   return array;
+// }
 
-const res = num([9, 6, 5, 18, 9, 17, 27]);
-console.log(res);
+// const res = num([9, 6, 5, 18, 9, 17, 27]);
+// console.log(res);
 
 // ## Середні задачі
 
 // 1. Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив
 //    де будуть лише ті елементи які зустрічаються і в arr1 і arr2.
+
+// !
+// function foo(arr1, arr2) {
+//   let result = [];
+//   for (let i = 0; i < arr1.length; i++) {
+//     for (let y = 0; y < arr2.length; y++) {
+//       if (arr1[i] === arr2[y]) {
+//         result.push(arr1[i]);
+//       }
+//     }
+//   }
+//   return result;
+// }
+
+// const res = foo([1, 4, 1, 5, 8], [2, 4, 4, 5, 1]);
+// console.log(res);
+
 // 1. Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив
 //    де будуть лише елементи масиву arr1 яких не має у масиві arr2.
 // 1. Напиши функцію яка приймає масив та знаходить мінімальний елемент.
