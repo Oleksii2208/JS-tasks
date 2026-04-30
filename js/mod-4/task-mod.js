@@ -1,5 +1,5 @@
 "use strict";
-console.log("Hello, world");
+// console.log("Hello, world");
 
 //! Задача 1. Пакування товарів
 // Напиши функцію isEnoughCapacity(products, containerSize), яка обчислює, чи помістяться всі товари
@@ -46,57 +46,59 @@ console.log("Hello, world");
 // код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.У консоль
 // будуть виведені результати її викликів.
 
-function calcAverageCalories(days) {
-  let totalCalories = 0;
-  for (const item of days) {
-    totalCalories += item.calories;
-  }
-  return totalCalories / days.length;
-}
+// function calcAverageCalories(days) {
+//   let totalCalories = 0;
+//   for (const item of days) {
+//     totalCalories += item.calories;
+//   }
+//   console.log(`${totalCalories} / ${days.length}`);
 
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 3010 },
-    { day: "tuesday", calories: 3200 },
-    { day: "wednesday", calories: 3120 },
-    { day: "thursday", calories: 2900 },
-    { day: "friday", calories: 3450 },
-    { day: "saturday", calories: 3280 },
-    { day: "sunday", calories: 3300 },
-  ])
-); // 3180
+//   return totalCalories / days.length;
+// }
 
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 2040 },
-    { day: "tuesday", calories: 2270 },
-    { day: "wednesday", calories: 2420 },
-    { day: "thursday", calories: 1900 },
-    { day: "friday", calories: 2370 },
-    { day: "saturday", calories: 2280 },
-    { day: "sunday", calories: 2610 },
-  ])
-); // 2270
+// console.log(
+//   calcAverageCalories([
+//     { day: "monday", calories: 3010 },
+//     { day: "tuesday", calories: 3200 },
+//     { day: "wednesday", calories: 3120 },
+//     { day: "thursday", calories: 2900 },
+//     { day: "friday", calories: 3450 },
+//     { day: "saturday", calories: 3280 },
+//     { day: "sunday", calories: 3300 },
+//   ])
+// ); // 3180
 
-console.log(calcAverageCalories([])); // 0
+// console.log(
+//   calcAverageCalories([
+//     { day: "monday", calories: 2040 },
+//     { day: "tuesday", calories: 2270 },
+//     { day: "wednesday", calories: 2420 },
+//     { day: "thursday", calories: 1900 },
+//     { day: "friday", calories: 2370 },
+//     { day: "saturday", calories: 2280 },
+//     { day: "sunday", calories: 2610 },
+//   ])
+// ); // 2270
+
+// console.log(calcAverageCalories([])); // 0
 
 //! Задача 3. Профіль гравця
 // Об’єкт profile описує профіль користувача на ігровій платформі. У його властивостях зберігається ім’я
 // профілю username та кількість активних годин playTime, проведених у грі.
 
-const profile = {
-  username: "Jacob",
-  playTime: 300,
-  changeUsername(newName) {
-    this.username = newName;
-  },
-  updatePlayTime(hours) {
-    this.playTime += hours;
-  },
-  getInfo() {
-    return `${this.username} has ${this.playTime} active hours!`;
-  },
-};
+// const profile = {
+//   username: "Jacob",
+//   playTime: 300,
+//   changeUsername(newName) {
+//     this.username = newName;
+//   },
+//   updatePlayTime(hours) {
+//     this.playTime += hours;
+//   },
+//   getInfo() {
+//     return `${this.username} has ${this.playTime} active hours!`;
+//   },
+// };
 
 // Доповни об’єкт profile методами для роботи з його властивостями.
 
@@ -109,10 +111,10 @@ const profile = {
 // Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У
 // консоль будуть виведені результати її роботи.
 
-console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+// console.log(profile.getInfo()); // "Jacob has 300 active hours!"
 
-profile.changeUsername("Marco");
-console.log(profile.getInfo()); // "Marco has 300 active hours!"
+// profile.changeUsername("Marco");
+// console.log(profile.getInfo()); // "Marco has 300 active hours!"
 
-profile.updatePlayTime(20);
-console.log(profile.getInfo()); // "Marco has 320 active hours!"
+// profile.updatePlayTime(20);
+// console.log(profile.getInfo()); // "Marco has 320 active hours!"

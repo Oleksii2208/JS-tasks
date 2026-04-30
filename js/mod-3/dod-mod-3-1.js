@@ -82,7 +82,7 @@
 //   return total;
 // }
 
-// const res = searchElement([5, 5, 4, 7, 6, 8, 7, 9, 4, 5, 5, 5, 4, 7, 8, 7], 5);
+// const res = searchElement([5, 5, 4, 7, 6, 8, 7, 9, 4, 5, 5, 5, 4, 7, 8, 7], 7);
 // console.log(res);
 
 // 1. Напиши функцію яка приймає масив чисел. Функція повинна видалити усі
@@ -171,32 +171,110 @@
 // 1. Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив
 //    де будуть лише ті елементи які зустрічаються і в arr1 і arr2.
 
-// !
 // function foo(arr1, arr2) {
 //   let result = [];
-//   for (let i = 0; i < arr1.length; i++) {
-//     for (let y = 0; y < arr2.length; y++) {
-//       if (arr1[i] === arr2[y]) {
-//         result.push(arr1[i]);
-//       }
+//   for (const elem of arr1) {
+//     if (arr2.includes(elem)) {
+//       result.push(elem);
 //     }
 //   }
+
 //   return result;
 // }
 
-// const res = foo([1, 4, 1, 5, 8], [2, 4, 4, 5, 1]);
+// const res = foo([1, 4, 1, 5, 2, 8], [2, 4, 4, 5, 2, 1, 6]);
 // console.log(res);
 
 // 1. Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив
 //    де будуть лише елементи масиву arr1 яких не має у масиві arr2.
+
+// function foo(arr1, arr2) {
+//   let array = [];
+//   for (let elem of arr1) {
+//     if (!arr2.includes(elem)) {
+//       array.push(elem);
+//     }
+//   }
+//   return array;
+// }
+
+// const res = foo([1, 5, 3, 8, 7, 6], [1, 2, 3, 4, 7, 9]);
+// console.log(res);
+
 // 1. Напиши функцію яка приймає масив та знаходить мінімальний елемент.
+
+// function minNumber(arr) {
+//   // With operation ...spread
+//   // let minNum = Math.min(...arr);
+//   // return minNum;
+
+//   let min = arr[0];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] < min) {
+//       min = arr[i];
+//     }
+//   }
+//   return min;
+// }
+
+// const res = minNumber([2, 5, 8, 9, 1, 4, 5]);
+// console.log(res);
+
 // 1. Напиши функцію яка приймає масив та знаходить максимальний елемент.
+
+// function maxNumber(arr) {
+
+// With operation ...spread
+//   //   let maxNum = Math.max(...arr);
+//   //   return maxNum;
+
+//   let max = arr[0];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+
+// const res = maxNumber([4, 5, 8, 9, 12, 25, 3, 7, 45]);
+// console.log(res);
+
 // 1. Напиши функцію яка приймає масив та повертає масив лише з тих елементів які
 //    більші за середнє значення всіх елементів масиву.
+
+// function foo(arr) {
+//   let res = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr.length / 2 < arr[i]) {
+//       res.push(arr[i]);
+//     }
+//   }
+//   return res;
+// }
+
+// const res = foo([2, 4, 5, 1, 8, 7, 5, 6]);
+// console.log(res);
+
 // 1. Напиши функцію яка приймає масив та повертає масив лише з тих елементів які
 //    більші за власний індекс.
+
+// function foo(arr) {
+//   let res = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > ) {
+//       res.push(arr[i]);
+//     }
+//   }
+//   return res;
+// }
+
+// const res = foo([8, 1, 0, 2, 4, 8, 7, 5, 10]);
+// console.log(res);
+
 // 1. Напишіть функці яка приймає масив чисел. Функція повинна занйти мінімальний
 //    елемент та видалити його з масиву.
+
 // 1. Напиши функцію яка приймає два параметри start та end. Функія повина
 //    повернути масив де будуть числа з діапазону але лише ті у яких не має
 //    цифри 5. К прикладу числа (51, 25, 15,256) не підходять бо містять символ "5"
