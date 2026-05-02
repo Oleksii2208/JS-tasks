@@ -1,5 +1,5 @@
 "use strict";
-console.log("Hello world");
+// console.log("Hello world");
 
 // # Обєкти
 
@@ -14,11 +14,11 @@ const person = {
   proffession: "Web Developer",
 };
 
-console.log(person);
+// console.log(person);
 
 // Доступ до властивостей: Виведіть на консоль ім'я створеного об'єкта person.
 
-console.log(person.name);
+// console.log(person.name);
 
 // Зміна властивостей: Змініть вік в об'єкті person на нове значення.
 
@@ -27,12 +27,12 @@ person.age = 34;
 // Додавання нових властивостей: Додайте до об'єкта person властивість місце_роботи
 // зі значенням.
 
-person.placeOfWork = "KLV";
+// person.placeOfWork = "KLV";
 
 // Видалення властивостей: Видаліть властивість професія з об'єкта person.
 
 person;
-console.log(person);
+// console.log(person);
 
 // Пошук властивостей: Перевірте, чи існує властивість професія в об'єкті person.
 
@@ -48,6 +48,9 @@ console.log(person);
 
 // Застосування Object.keys(): Виведіть на консоль масив зі всіма ключами об'єкта
 // person за допомогою функції Object.keys().
+
+const keys = Object.keys(person);
+// console.log(keys);
 
 // ---
 

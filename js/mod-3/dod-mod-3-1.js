@@ -262,34 +262,125 @@
 // function foo(arr) {
 //   let res = [];
 //   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] > ) {
+//     if (arr[i] > i) {
 //       res.push(arr[i]);
 //     }
 //   }
 //   return res;
 // }
 
-// const res = foo([8, 1, 0, 2, 4, 8, 7, 5, 10]);
+// const res = foo([8, 3, 3, 2, 4, 8, 7, 5, 10]);
 // console.log(res);
 
-// 1. Напишіть функці яка приймає масив чисел. Функція повинна занйти мінімальний
+// 1. Напишіть функці яка приймає масив чисел. Функція повинна знайти мінімальний
 //    елемент та видалити його з масиву.
+
+// function foo(numbers) {
+//   let min = numbers[0];
+//   let minIndex = 0;
+//   // let result = [];
+//   //   return Math.min(...numbers);
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] < min) {
+//       min = numbers[i];
+//       minIndex = i;
+//     }
+//   }
+//   numbers.splice(minIndex, 1); // вказую індекс елемента який потрібно видалити, і 1 - скільки після нього
+//   // починаючи з нього якщо не вказати тоді видалить до кінця всі елементи
+//   numbers.splice(2, 0, 7); //Додавання 2-індекс елемента перед яким потрібно додати, 0-вказуємо що на
+//   // видалення 0 елементів, 7- елемент який потрібно додати
+//   return numbers;
+// }
+
+// const res = foo([5, 2, 8, 9, 2, 1, 5, 3]);
+// console.log(res);
 
 // 1. Напиши функцію яка приймає два параметри start та end. Функія повина
 //    повернути масив де будуть числа з діапазону але лише ті у яких не має
 //    цифри 5. К прикладу числа (51, 25, 15,256) не підходять бо містять символ "5"
 //    у собі.
 
+function name(params) {}
+
 // ## Складні
 
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий масив, де всі парні
 //    числа переміщені в початок, а всі непарні - в кінець.
+
+// const numbers = [2, 1, 3, 8, 5, 6, 10, 7, 4, 9];
+// function foo(numbers) {
+//   let evenNumbers = [];
+//   let oddNumbers = [];
+//   for (const number of numbers) {
+//     if (number % 2 === 0) {
+//       evenNumbers.push(number);
+//     } else {
+//       oddNumbers.push(number);
+//     }
+//   }
+//   //   const res = evenNumbers.concat(oddNumbers);
+// //   const res = [...evenNumbers, ...oddNumbers];
+//   return res;
+// }
+
+// const result = foo(numbers);
+// console.log(result);
+
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий массив, де кожен
 //    елемент є сумою усіх попередніх елементів.
+
+// const numbers = [2, 1, 3, 8, 5, 6, 10, 7, 4, 9];
+// function foo(numbers) {
+//   let resArr = [];
+//   let currentSum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     currentSum = currentSum + numbers[i];
+//     resArr.push(currentSum);
+//   }
+
+//   return resArr;
+// }
+
+// const result = foo(numbers);
+// console.log(result);
+
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий массив, що містить
 //    лише унікальні числа.
+
+// const numbers = [2, 2, 2, 2, 1, 3, 8, 8, 5, 6, 10, 8, 7, 4, 9];
+
+// function foo(numbers) {
+//   let resArr = [];
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (!resArr.includes(numbers[i])) {
+//       resArr.push(numbers[i]);
+//     }
+//   }
+//   return resArr;
+// }
+
+// const result = foo(numbers);
+// console.log(result);
+
 // 1. Напиши функцію, яка приймає два масиви і повертає об'єднаний массив без
 //    дублювання елементів.
+
+function foo(arr1, arr2) {
+  let resArr = [];
+  const array = [...arr1, ...arr2];
+
+  for (let i = 0; i < array.length; i++) {
+    if (!resArr.includes(array[i])) {
+      resArr.push(array[i]);
+    }
+  }
+  return resArr;
+}
+
+const res = foo([1, 5, 7, 8], [2, 5, 7, 3]);
+console.log(res);
+
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий массив, де кожен
 //    елемент є середньоарифметичним всіх сусідніх елементів.
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий массив, де елементи
