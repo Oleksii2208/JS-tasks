@@ -301,7 +301,23 @@
 //    цифри 5. К прикладу числа (51, 25, 15,256) не підходять бо містять символ "5"
 //    у собі.
 
-function name(params) {}
+function foo(start, end) {
+  let res = [];
+  console.log(res);
+
+  for (let i = start; i <= end; i++) {
+    if (res.includes(5)) {
+      res.pop();
+    }
+    res.push(i);
+  }
+  console.log(res);
+
+  return res;
+}
+
+const res = foo(3, 16);
+console.log(res);
 
 // ## Складні
 
@@ -366,27 +382,33 @@ function name(params) {}
 // 1. Напиши функцію, яка приймає два масиви і повертає об'єднаний массив без
 //    дублювання елементів.
 
-function foo(arr1, arr2) {
-  let resArr = [];
-  const array = [...arr1, ...arr2];
+// function foo(arr1, arr2) {
+//   let resArr = [];
+//   const array = [...arr1, ...arr2];
 
-  for (let i = 0; i < array.length; i++) {
-    if (!resArr.includes(array[i])) {
-      resArr.push(array[i]);
-    }
-  }
-  return resArr;
-}
+//   for (let i = 0; i < array.length; i++) {
+//     if (!resArr.includes(array[i])) {
+//       resArr.push(array[i]);
+//     }
+//   }
+//   return resArr;
+// }
 
-const res = foo([1, 5, 7, 8], [2, 5, 7, 3]);
-console.log(res);
+// const res = foo([1, 5, 7, 8], [2, 5, 7, 3]);
+// console.log(res);
 
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий массив, де кожен
 //    елемент є середньоарифметичним всіх сусідніх елементів.
+
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий массив, де елементи
 //    відсортовані в порядку збільшення або зменшення.
+
 // 1. Напиши функцію, яка приймає массив рядочків та сортує їх за довжиною
 //    елементів.
+
+// function foo(arr) {
+//   let sortArr = [];
+// }
 
 // ## Codewars
 
