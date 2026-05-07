@@ -301,23 +301,23 @@
 //    цифри 5. К прикладу числа (51, 25, 15,256) не підходять бо містять символ "5"
 //    у собі.
 
-function foo(start, end) {
-  let res = [];
-  console.log(res);
+// function foo(start, end) {
+//   let res = [];
+//   console.log(res);
 
-  for (let i = start; i <= end; i++) {
-    if (res.includes(5)) {
-      res.pop();
-    }
-    res.push(i);
-  }
-  console.log(res);
+//   for (let i = start; i <= end; i++) {
+//     if (res.includes(5)) {
+//       res.pop();
+//     }
+//     res.push(i);
+//   }
+//   console.log(res);
 
-  return res;
-}
+//   return res;
+// }
 
-const res = foo(3, 16);
-console.log(res);
+// const res = foo(3, 16);
+// console.log(res);
 
 // ## Складні
 
