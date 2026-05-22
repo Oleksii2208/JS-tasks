@@ -1,16 +1,80 @@
 "use strict";
+// console.log("Hello world");
+
 // 1. **Сума чисел:** Напишіть функцію `sumArray(numbers, callback)`, яка приймає
 //    масив чисел `numbers` та колбек `callback`. Функція повинна обчислити суму
 //    чисел у масиві та передати результат у колбек.
+
+// function sumArray(numbers, callback) {
+//   let sum = 0;
+//   numbers.forEach((element) => {
+//     sum += element;
+//   });
+
+//   callback(sum);
+// }
+
+// function result(sum) {
+//   console.log(`Result: ${sum}`);
+//   return `Result: ${sum}`;
+// }
+
+// const numbers = [4, 5, 2, 8, 12, 4];
+// sumArray(numbers, result);
+
+// ----
+// function sumArray(numbers, callback = (sum) => console.log(`Result: ${sum}`)) {
+//   let sum = 0;
+//   numbers.forEach((element) => {
+//     sum += element;
+//   });
+
+//   callback(sum);
+// }
+
+// // function result(sum) {
+// //   console.log(`Result: ${sum}`);
+// //   return `Result: ${sum}`;
+// // }
+
+// const numbers = [4, 5, 2, 8, 12, 4];
+// sumArray(numbers);
 
 // 2. **Подвоєння чисел:** Напишіть функцію `doubleArray(numbers, callback)`, яка
 //    приймає масив чисел `numbers` та колбек `callback`. Функція повинна подвоїти
 //    кожне число в масиві та передати новий масив у колбек.
 
+// const doubleArray = (numbers, callback = (res) => console.log(res)) => {
+//   const res = numbers.map((number) => number * 2);
+//   callback(res);
+// };
+
+// const numbers = [4, 5, 2, 8, 12, 4];
+// doubleArray(numbers);
+
 // 3. **Фільтр слів:** Напишіть функцію `filterWords(words, condition, callback)`,
 //    яка приймає масив рядків `words`, функцію `condition` (перевірка рядка) та
 //    колбек `callback`. Функція повинна фільтрувати слова масиву за допомогою
 //    переданої умови та передати відфільтрований масив у колбек.
+
+// const words = ["Try", "Use", "World", "Hello", "is"];
+
+// const condition = (word) => word.length > 3;
+// const callback = (res) => {
+//   console.log(res);
+// };
+
+// const filterWords = (words, condition, callback) => {
+//   let result = [];
+//   const res = words.forEach((word) => {
+//     if (condition(word)) {
+//       result += res;
+//     }
+//   });
+//   console.log(res);
+//   callback(res);
+// };
+// filterWords(words, condition, callback);
 
 // 4. **Капіталізація рядків:** Напишіть функцію
 //    `capitalizeStrings(strings, callback)`, яка приймає масив рядків `strings` та
