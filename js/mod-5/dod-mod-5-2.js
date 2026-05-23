@@ -1462,42 +1462,177 @@ const books = [
   },
 ];
 
-// 1. Знайти всі книги жанру 'Fantasy'.
-// 1. Знайти всі книги, видані після 2000 року.
-// 1. Знайти всі книги, автором яких є 'Fyodor Dostoevsky'.
-// 1. Знайти всі книги з ціною меншою ніж 10 доларів.
-// 1. Знайти всі книги з рейтингом 4.8 і вище.
-// 1. Знайти всі книги жанру 'Romance' та з ціною меншою ніж 8 доларів.
-// 1. Знайти всі книги, видані до 1900 року.
-// 1. Знайти всі книги, що містять слово 'and' у назві.
-// 1. Знайти всі книги, автором яких є 'J.R.R. Tolkien'.
-// 1. Знайти всі книги жанру 'Historical' з рейтингом вище 4.7.
+//! Метод filter()
 
+// 1. Знайти всі книги жанру 'Fantasy'.
+
+// const genreBook = (books) => books.filter((book) => book.genre === "Fantasy");
+// console.table(genreBook(books));
+
+// 1. Знайти всі книги, видані після 2000 року.
+
+// const yearPublication = (books) => books.filter((book) => book.year > 1950);
+// console.table(yearPublication(books));
+
+// 1. Знайти всі книги, автором яких є 'Fyodor Dostoevsky'.
+
+// const hasAuthor = (books) =>
+//   books.filter((book) => book.author === "Fyodor Dostoevsky");
+// console.table(hasAuthor(books));
+
+// 1. Знайти всі книги з ціною меншою ніж 10 доларів.
+
+// const priceBook = (books) => books.filter((book) => book.price < 10);
+// console.table(priceBook(books));
+
+// 1. Знайти всі книги з рейтингом 4.8 і вище.
+
+// const ratingBook = (books) => books.filter((book) => book.rating >= 4.8);
+// console.table(ratingBook(books));
+
+// 1. Знайти всі книги жанру 'Romance' та з ціною меншою ніж 8 доларів.
+
+// const genreBook = (books) => books.filter((book) => book.genre === "Romance");
+// console.table(genreBook(books));
+
+// 1. Знайти всі книги, видані до 1900 року.
+
+// const yearPublication = (books) => books.filter((book) => book.year < 1900);
+// console.table(yearPublication(books));
+
+// 1. Знайти всі книги, що містять слово 'and' у назві.
+
+// const hasAnd = (books) => books.filter((book) => book.title.includes("and"));
+// console.table(hasAnd(books));
+
+// 1. Знайти всі книги, автором яких є 'J.R.R. Tolkien'.
+
+// const authorBook = (books) =>
+//   books.filter((book) => book.author === "J.R.R. Tolkien");
+// console.table(authorBook(books));
+
+// 1. Знайти всі книги жанру 'Historical' з рейтингом вище 4.8.
+
+// const genreBook = (books) =>
+//   books.filter((book) => book.genre === "Historical" && book.rating > 4.8);
+// console.table(genreBook(books));
 // ---
+
+//! Метод find() шукає першу схожу
 
 // 1. Знайти першу книгу жанру 'Fantasy'.
+
+// const genreBook = (books) => books.find((book) => book.genre === "Fantasy");
+// console.table(genreBook(books));
+
 // 1. Знайти першу книгу, видану після 2000 року.
+
+// const yearPublication = (books) => books.find((book) => book.year > 1950);
+// console.table(yearPublication(books));
+
 // 1. Знайти першу книгу, автором якої є 'Fyodor Dostoevsky'.
+
+// const findBookAuthor = (books) =>
+//   books.find((book) => book.author === "Fyodor Dostoevsky");
+// console.table(findBookAuthor(books));
+
 // 1. Знайти першу книгу з ціною меншою ніж 10 доларів.
+
+// const priceBook = (books) => books.find((book) => book.price < 10);
+// console.table(priceBook(books));
+
 // 1. Знайти першу книгу з рейтингом 4.8 і вище.
+
+// const ratingBook = (books) => books.find((book) => book.rating >= 4.8);
+// console.table(ratingBook(books));
+
 // 1. Знайти першу книгу жанру 'Romance' з ціною меншою ніж 8 доларів.
+
+// const getBook = (books) =>
+//   books.find((book) => book.genre === "Romance" && book.price < 8);
+// console.table(getBook(books));
+
 // 1. Знайти першу книгу, видану до 1900 року.
+
+// const getBookPublication = (books) => books.find((book) => book.year < 1900);
+// console.table(getBookPublication(books));
+
 // 1. Знайти першу книгу, що містить слово 'and' у назві.
+
+// const getBook = (books) => books.find((book) => book.title.includes("and"));
+// console.table(getBook(books));
+
 // 1. Знайти першу книгу, автором якої є 'J.R.R. Tolkien'.
+
+// const getBookAuthor = (books) =>
+//   books.find((book) => book.author === "J.R.R. Tolkien");
+// console.table(getBookAuthor(books));
+
 // 1. Знайти першу книгу жанру 'Historical' з рейтингом вище 4.7.
+
+// const getBookGenre = (books) =>
+//   books.find((book) => book.genre === "Historical" && book.rating > 4.7);
+// console.table(getBookGenre(books));
 
 // ---
 
+//! Метод some() запитує чи є хоча б одна
+
 // 1. Чи є в масиві хоча б одна книга жанру 'Fantasy'?
+
+// const hasBookFantasy = (books) =>
+//   books.some((book) => book.genre === "Fantasy");
+// console.table(hasBookFantasy(books));
+
 // 1. Чи є в масиві хоча б одна книга, видана після 2000 року?
+
+// const hasBookYear = (books) => books.some((book) => book.year === 2000);
+// console.log(hasBookYear(books));
+
 // 1. Чи є в масиві хоча б одна книга, автором якої є 'Fyodor Dostoevsky'?
+
+// const hasBookAuthor = (books) =>
+//   books.some((book) => book.author === "Fyodor Dostoevsky");
+// console.log(hasBookAuthor(books));
+
 // 1. Чи є в масиві хоча б одна книга з ціною меншою ніж 10 доларів?
+
+// const hasBookPrice = (books) => books.some((book) => book.price < 10);
+// console.log(hasBookPrice(books));
+
 // 1. Чи є в масиві хоча б одна книга з рейтингом 4.8 і вище?
+
+// const hasBookRating = (books) => books.some((book) => book.rating > 4.8);
+// console.log(hasBookRating(books));
+
 // 1. Чи є в масиві хоча б одна книга жанру 'Romance' з ціною меншою ніж 8 доларів?
+
+// const hasBookGenre = (books) =>
+//   books.some((book) => book.genre === "Romance" && book.price < 8);
+// console.log(hasBookGenre(books));
+
 // 1. Чи є в масиві хоча б одна книга, видана до 1900 року?
+
+// const hasBookYears = (books) => books.some((book) => book.year < 1900);
+// console.log(hasBookYears(books));
+
 // 1. Чи є в масиві хоча б одна книга, що містить слово 'and' у назві?
+
+// const hasBookTitle = (books) =>
+//   books.some((book) => book.title.includes("and"));
+// console.log(hasBookTitle(books));
+
 // 1. Чи є в масиві хоча б одна книга, автором якої є 'J.R.R. Tolkien'?
+
+// const hasBookAuthors = (books) =>
+//   books.some((book) => book.author === "J.R.R. Tolkien");
+// console.log(hasBookAuthors(books));
+
 // 1. Чи є в масиві хоча б одна книга жанру 'Historical' з рейтингом вище 4.7?
+
+// const hasBookGenres = (books) =>
+//   books.some((book) => book.genre === "Historical" && book.rating > 4.7);
+// console.log(hasBookGenres(books));
 
 // ---
 
