@@ -10,36 +10,36 @@
 // Використай цей стартовий код і виконай рефакторинг. Після оголошення об'єкта ми додали виклики
 // методів.У консоль будуть виведені результати їх роботи.Будь ласка, нічого там не змінюй.
 
-const customer = {
-  username: "Mango",
-  balance: 24000,
-  discount: 0.1,
-  orders: ["Burger", "Pizza", "Salad"],
-  // Change code below this line
-  getBalance() {
-    return this.balance;
-  },
-  getDiscount() {
-    return this.discount;
-  },
-  setDiscount(value) {
-    this.discount = value;
-  },
-  getOrders() {
-    return this.orders;
-  },
-  addOrder(cost, order) {
-    this.balance -= cost - cost * this.discount;
-    this.orders.push(order);
-  },
-  // Change code above this line
-};
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+//   // Change code above this line
+// };
 
-customer.setDiscount(0.15);
-console.log(customer.getDiscount()); // 0.15
-customer.addOrder(5000, "Steak");
-console.log(customer.getBalance()); // 19750
-console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 
 // Оголошена змінна customer
 // Значення змінної customer — це об'єкт із властивостями та методами
@@ -53,3 +53,118 @@ console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 // Метод setDiscount об'єкта customer використовує this
 // Метод getOrders об'єкта customer використовує this
 // Метод addOrder об'єкта customer використовує this
+
+//! Задача 2. Склад
+
+// Створи клас Storage, який створюватиме об'єкти для управління складом товарів. Клас очікує лише один
+// аргумент — початковий масив товарів, який записується до створеного об'єкта в приватну властивість
+// items.
+// Оголоси наступні методи класу:
+// - getItems() — повертає масив поточних товарів у приватній властивості items.
+// - addItem(newItem) — приймає новий товар newItem і додає його до масиву товарів у приватну
+// властивість items об'єкта.
+// - removeItem(itemToRemove) — приймає рядок з назвою товару itemToRemove і видаляє його з масиву
+// товарів у приватній властивості items об'єкта.
+
+// Візьми код нижче з ініціалізацією екземпляра й викликами методів і встав його після оголошення
+// класу для перевірки коректності роботи.У консоль будуть виведені результати їх роботи.Будь ласка,
+// нічого там не змінюй.
+
+// class Storage {
+//   #items;
+
+//   constructor(items) {
+//     this.#items = items;
+//   }
+
+//   getItems() {
+//     return this.#items;
+//   }
+
+//   addItem(newItem) {
+//     return this.#items.push(newItem);
+//   }
+
+//   removeItem(itemToRemove) {
+//     return (this.#items = this.#items.filter((item) => item !== itemToRemove));
+//   }
+// }
+
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+// storage.removeItem("Scaner");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+//! Задача 3. Конструктор рядків
+
+// Напиши клас StringBuilder, який приймає один параметр initialValue — довільний рядок, який
+// записується у приватну властивість value об'єкта, що створюється.
+// Оголоси наступні методи класу:
+
+// getValue() — повертає поточне значення приватної властивості value.
+// padEnd(str) — отримує параметр str (рядок) і додає його в кінець значення приватної властивості value
+// об'єкта, який викликає цей метод.
+// padStart(str) — отримує параметр str(рядок) і додає його на початок значення приватної властивості
+// value об'єкта, який викликає цей метод.
+// padBoth(str) — отримує параметр str (рядок) і додає його на початок і в кінець значення приватної
+// властивості value об'єкта, який викликає цей метод.
+// Візьми код нижче з ініціалізацією екземпляра й викликами методів і встав його після оголошення класу
+// для перевірки коректності роботи.У консоль будуть виведені результати їх роботи.Будь ласка, нічого
+// там не змінюй.
+
+class StringBuilder {
+  #value;
+
+  constructor(initialValue) {
+    return (this.#value = initialValue);
+  }
+
+  getValue() {
+    return this.#value;
+  }
+
+  padStart(str) {
+    return (this.#value = str + this.#value);
+  }
+
+  padEnd(str) {
+    return (this.#value = this.#value + str);
+  }
+
+  padBoth(str) {
+    return (this.#value = str + this.#value + str);
+  }
+}
+
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
+
+// Оголошений клас StringBuilder
+// Властивість value у класі StringBuilder оголошена приватною
+// У класі StringBuilder оголошений метод getValue
+// Метод getValue повертає значення приватної властивості value екземпляра класу, який його викликає
+// У класі StringBuilder оголошений метод padEnd
+// Метод padEnd змінює значення приватної властивості value екземпляра класу, який його викликає
+// У класі StringBuilder оголошений метод padStart
+// Метод padStart змінює приватну властивість value екземпляра класу, який його викликає
+// У класі StringBuilder оголошений метод padBoth
+// Метод padBoth змінює значення приватної властивості value екземпляра класу, який його викликає
+// У результаті виклику new StringBuilder(".") значення приватної змінної builder — це об'єкт
+// Об'єкт builder не містить публічну властивість value
+// Перший виклик builder.getValue() одразу після ініціалізації екземпляра повертає рядок .
+// Другий виклик builder.getValue() після виклику builder.padStart("^") повертає рядок ^.
+// Третій виклик builder.getValue() після виклику builder.padEnd("^") повертає рядок ^.^
+// Четвертий виклик builder.getValue() після виклику builder.padBoth("=") повертає рядок =^.^=
