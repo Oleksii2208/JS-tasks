@@ -82,11 +82,11 @@
 //   }
 
 //   addItem(newItem) {
-//     return this.#items.push(newItem);
+//     this.#items.push(newItem);
 //   }
 
 //   removeItem(itemToRemove) {
-//     return (this.#items = this.#items.filter((item) => item !== itemToRemove));
+//     this.#items = this.#items.filter((item) => item !== itemToRemove);
 //   }
 // }
 
@@ -119,38 +119,38 @@
 // для перевірки коректності роботи.У консоль будуть виведені результати їх роботи.Будь ласка, нічого
 // там не змінюй.
 
-class StringBuilder {
-  #value;
+// class StringBuilder {
+//   #value;
 
-  constructor(initialValue) {
-    return (this.#value = initialValue);
-  }
+//   constructor(initialValue) {
+//     this.#value = initialValue;
+//   }
 
-  getValue() {
-    return this.#value;
-  }
+//   getValue() {
+//     return this.#value;
+//   }
 
-  padStart(str) {
-    return (this.#value = str + this.#value);
-  }
+//   padStart(str) {
+//     this.#value = str + this.#value;
+//   }
 
-  padEnd(str) {
-    return (this.#value = this.#value + str);
-  }
+//   padEnd(str) {
+//     this.#value = this.#value + str;
+//   }
 
-  padBoth(str) {
-    return (this.#value = str + this.#value + str);
-  }
-}
+//   padBoth(str) {
+//     this.#value = str + this.#value + str;
+//   }
+// }
 
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
 
 // Оголошений клас StringBuilder
 // Властивість value у класі StringBuilder оголошена приватною
