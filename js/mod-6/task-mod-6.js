@@ -168,3 +168,39 @@
 // Другий виклик builder.getValue() після виклику builder.padStart("^") повертає рядок ^.
 // Третій виклик builder.getValue() після виклику builder.padEnd("^") повертає рядок ^.^
 // Четвертий виклик builder.getValue() після виклику builder.padBoth("=") повертає рядок =^.^=
+
+//! Task-4
+
+// Переробіть методи об’єкта pizzaPalace, додавши пропущене this у місцях, де
+// здійснюється доступ до властивостей та методів об’єкта.
+// ТЕСТИ
+// • Метод checkPizza об'єкта pizzaPalace використовує this.
+// • Метод order об'єкта pizzaPalace використовує this.
+// • Виклик pizzaPalace.order("Smoked") повертає рядок "Замовлення прийнято, готуємо піцу «Smoked»".
+// • Виклик pizzaPalace.order("Four meats") повертає рядок "Замовлення прийнято, готуємо піцу «Four meats»".
+// • Виклик pizzaPalace.order("Big Mike") повертає рядок "Вибачте, піци з назвою «Big Mike» немає".
+// • Виклик pizzaPalace.order("Viennese") повертає рядок "Вибачте, піци з назвою «Viennese» немає".
+
+// const pizzaPalace = {
+//   pizzas: ["Supercheese", "Smoked", "Four meats"],
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+//     // console.log(isPizzaAvailable);
+
+//     if (!isPizzaAvailable) {
+//       return `Sorry, there is no pizza named «${pizzaName}»`;
+//     }
+
+//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   },
+// };
+
+// console.log(pizzaPalace.order("Smoked"));
+// console.log(pizzaPalace.order("Four meats"));
+// console.log(pizzaPalace.order("Big Mike"));
+// console.log(pizzaPalace.order("Viennese"));
+
+//! Task-5

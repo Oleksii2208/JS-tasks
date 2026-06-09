@@ -1644,14 +1644,42 @@ const books = [
 // console.log(hasAllRating(books));
 
 // 1. Чи всі книги в масиві коштують менше 20 доларів?
+
+// const priceBook = (books) => books.every((book) => book.price < 20);
+// console.log(priceBook(books));
+
 // 1. Чи всі книги в масиві видані після 1950 року?
+
+// const publisherBook = (books) => {
+//   const res = books.every((book) => {
+//     return book.year > 1950;
+//   });
+//   return res;
+// };
+// console.log(publisherBook(books));
+
 // 1. Чи всі книги в масиві є жанру 'Fiction'?
-// 1. Чи всі книги в масиві мають автора з ім'ям, що починається на 'J'?
-// 1. Чи всі книги в масиві є жанру 'Romance' з ціною меншою ніж 15 доларів?
+
+// const genreBook = (books) => books.every((book) => book.genre === "Fiction");
+// console.log(genreBook(books));
+
+//! 1. Чи всі книги в масиві мають автора з ім'ям, що починається на 'J'?
+//! 1. Чи всі книги в масиві є жанру 'Romance' з ціною меншою ніж 15 доларів?
 // 1. Чи всі книги в масиві видані до 2000 року?
-// 1. Чи всі книги в масиві мають слово 'the' у назві?
+
+// const publisherBook = (books) => books.every((book) => book.year < 2000);
+// console.log(publisherBook(books));
+
+//! 1. Чи всі книги в масиві мають слово 'the' у назві?
 // 1. Чи всі книги в масиві мають рейтинг вище 4.0?
+
+// const checkRatingBook = (books) => books.every((book) => book.rating > 4);
+// console.log(checkRatingBook(books));
+
 // 1. Чи всі книги в масиві є жанру 'Adventure'?
+
+// const genreBook = (books) => books.every((book) => book.genre === "Adventure");
+// console.log(genreBook(books));
 
 // ---
 

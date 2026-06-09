@@ -1,15 +1,159 @@
 "use strict";
 // console.log("Hello world");
 
+// const animal = {
+//   name: "Smokie",
+//   age: 1,
+//   type: "cat",
+//   showName() {
+//     console.log(this.name);
+//   },
+//   showAge() {
+//     console.log(this.age);
+//   },
+//   showType() {
+//     const show = () => {
+//       console.log(this.type);
+//     };
+//     show();
+//   },
+// };
+
+// animal.showName();
+// animal.showAge();
+// animal.showType();
+
+// Прототип об'єкта
+// const dog = Object.create(animal);
+// dog.name = "Bob";
+// console.log(dog);
+
+// Перевірка прототипу
+// const result = animal.isPrototypeOf(dog);
+// console.log(result);
+
+// Власні і невласні властивості
+// const result = dog.hasOwnProperty("age");
+// console.log(result);
+
+// Перебір власних властивостей Методи Object.keys(obj) і Object.values(obj) повертають масив тільки
+// власних ключів або значень тільки власних властивостей об'єкта obj, без необхідності додаткових
+// перевірок
+// console.log(Object.keys(dog));
+// console.log(Object.values(dog));
+// for (const key of Object.keys(dog)) {
+//   console.log(key); // "name"
+// }
+
+// Ланцюжки прототипів
+// Об'єкт, який виступає прототипом для іншого об'єкта, також може мати свій прототип.
+// const objC = { c: "objC prop" };
+
+// const objB = Object.create(objC);
+// objB.b = "objB prop";
+
+// const objA = Object.create(objB);
+// objA.a = "objA prop";
+
+// console.log(objA); // { a: "objA prop", [[Prototype]]: objB }
+// console.log(objB); // { b: "objB prop", [[Prototype]]: objC }
+// console.log(objC); // { c: "objC prop", [[Prototype]]: Object }
+
+// function catName() {
+//   console.log(`${this.name}`);
+// }
+
+// // catName();
+// // const res = catName.call(animal);
+// const res = catName.bind(animal);
+// res();
+
 // Клас Calculator: Реалізуйте клас Calculator, який матиме методи для
 // Основні математичні операції: add, subtract, multiply, і divide. Кожен
 // метод прийматиме два числа і повертатиме результат відповідної операції.
+
+// class Calculator {
+// constructor(a, b) {
+//   this.a = a;
+//   this.b = b;
+// }
+//   add(a, b) {
+//     return a + b;
+//   }
+//   subtract(a, b) {
+//     return a - b;
+//   }
+//   multiply(a, b) {
+//     return a * b;
+//   }
+//   divide(a, b) {
+//     if (b === 0) {
+//       return "You can`t divide by zero";
+//     }
+//     return a / b;
+//   }
+// }
+
+// const calculator = new Calculator();
+// console.log(calculator.add(5, 7));
+// console.log(calculator.subtract(12, 10));
+// console.log(calculator.multiply(5, 10));
+// console.log(calculator.divide(25, 5));
 
 // ---
 
 // Клас ContactBook: Створіть клас Contact для подання контакту з полями name,
 // email та phone. Потім реалізуйте клас ContactBook, який зберігатиме список
 // контактів та надавати методи для додавання, видалення та пошуку контактів.
+
+// class Contact {
+//   constructor(name, email, phone) {
+//     this.name = name;
+//     this.email = email;
+//     this.phone = phone;
+//   }
+// }
+
+// class ContactBook {
+//   constructor() {
+//     this.contacts = [];
+//   }
+
+//   addContact(newContact) {
+//     return this.contacts.push(newContact);
+//   }
+
+//   removeContact(name) {
+//     return (this.contacts = this.contacts.filter(
+//       (contact) => contact.name !== name
+//     ));
+//   }
+
+//   findContact(name) {
+//     return this.contacts.find((contact) => contact.name === name);
+//   }
+// }
+
+// const myBook = new ContactBook();
+
+// const contact1 = new Contact(
+//   "Oleksii",
+//   "alekseyko2208@gmail.com",
+//   "0953444078"
+// );
+// const contact2 = new Contact("Olenka", "alekseyko2208@gmail.com", "0953444078");
+// const contact3 = new Contact("Alex", "alekseyko2208@gmail.com", "0953444078");
+
+// myBook.addContact(contact1);
+// myBook.addContact(contact2);
+// myBook.addContact(contact3);
+
+// console.log(myBook.contacts);
+
+// myBook.removeContact("Alex");
+// console.log(myBook.contacts);
+
+// console.log(myBook.findContact("Olenka"));
 
 // ---
 
